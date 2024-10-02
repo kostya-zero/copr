@@ -61,7 +61,7 @@ Version: %{_basekver}.%{_stablekver}
 Release:%{flaver}.0%{?ltoflavor:.lto}%{?dist}
 
 %define rpmver %{version}-%{release}
-%define krelstr zen2-%{release}.%{_arch}
+%define krelstr zen2.%{release}.%{_arch}
 %define kverstr %{version}-%{krelstr}
 
 License: GPLv2 and Redistributable, no modifications permitted
