@@ -42,7 +42,7 @@
 %define _nv_open_pkg open-gpu-kernel-modules-%{_nv_ver}
 
 %define flavor cachyos
-Name: kernel%{?flavor:-%{flavor}}%{?ltoflavor:-lto}
+Name: kernel%{?flavor:-%{flavor}}%{?ltoflavor:-lto}-zen2
 Summary: The Linux Kernel with Cachyos-BORE-EEVDF Patches
 
 %define _basekver 6.11
