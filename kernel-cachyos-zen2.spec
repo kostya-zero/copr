@@ -403,6 +403,8 @@ scripts/config -e HAVE_GCC_PLUGINS
 
 # Enable build for Zen 2 arch
 scripts/config -e MZEN2
+scripts/config -u GENERIC_CPU
+
 
 # Unset hostname
 scripts/config -u DEFAULT_HOSTNAME
