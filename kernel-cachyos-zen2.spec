@@ -389,22 +389,21 @@ scripts/config -e PREEMPTION
 scripts/config -e PREEMPT_DYNAMIC
 
 # Enable thin lto
-%if %{llvm_kbuild}
-scripts/config -e LTO
-scripts/config -e LTO_CLANG
-scripts/config -e ARCH_SUPPORTS_LTO_CLANG
-scripts/config -e ARCH_SUPPORTS_LTO_CLANG_THIN
-scripts/config -d LTO_NONE
-scripts/config -e HAS_LTO_CLANG
-scripts/config -d LTO_CLANG_FULL
-scripts/config -e LTO_CLANG_THIN
-scripts/config -e HAVE_GCC_PLUGINS
-%endif
+#%if %{llvm_kbuild}
+#scripts/config -e LTO
+#scripts/config -e LTO_CLANG
+#scripts/config -e ARCH_SUPPORTS_LTO_CLANG
+#scripts/config -e ARCH_SUPPORTS_LTO_CLANG_THIN
+#scripts/config -d LTO_NONE
+#scripts/config -e HAS_LTO_CLANG
+#scripts/config -d LTO_CLANG_FULL
+#scripts/config -e LTO_CLANG_THIN
+#scripts/config -e HAVE_GCC_PLUGINS
+#%endif
 
 # Enable build for Zen 2 arch
 scripts/config -e MZEN2
 scripts/config -u GENERIC_CPU
-
 
 # Unset hostname
 scripts/config -u DEFAULT_HOSTNAME
