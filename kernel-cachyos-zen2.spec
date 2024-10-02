@@ -26,7 +26,7 @@
 %define llvm_kbuild 1
 %if %{llvm_kbuild}
 %define llvm_build_env_vars CC=clang CXX=clang++ LD=ld.lld LLVM=1 LLVM_IAS=1
-%define ltoflavor 0
+#%define ltoflavor 
 %endif
 
 # Define rawhide fedora version
