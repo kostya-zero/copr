@@ -23,7 +23,7 @@
 %endif
 
 # whether to build kernel with llvm compiler(clang)
-%define llvm_kbuild 1
+%define llvm_kbuild 0
 %if %{llvm_kbuild}
 %define llvm_build_env_vars CC=clang CXX=clang++ HOSTCC=clang HOSTCXX=clang++ LD=ld.lld HOSTLD=ld.lld LLVM=1 AR=llvm-ar HOSTAR=llvm-ar NM=llvm-nm LLVM_IAS=1 STRIP=llvm-strip OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump READELF=llvm-readelf RANLIB=llvm-ranlib CC_LD=ld.lld CXX_LD=ld.lld
 %endif
