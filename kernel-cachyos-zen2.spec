@@ -25,7 +25,7 @@
 # whether to build kernel with llvm compiler(clang)
 %define llvm_kbuild 1
 %if %{llvm_kbuild}
-%define llvm_build_env_vars CC=clang CXX=clang++ HOSTCC=clang HOSTCXX=clang++ LD=mold HOSTLD=mold LLVM=1 AR=llvm-ar HOSTAR=llvm-ar NM=llvm-nm LLVM_IAS=1 STRIP=llvm-strip OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump READELF=llvm-readelf RANLIB=llvm-ranlib CC_LD=mold CXX_LD=mold
+%define llvm_build_env_vars CC=clang CXX=clang++ HOSTCC=clang HOSTCXX=clang++ LD=ld.lld HOSTLD=ld.lld LLVM=1 AR=llvm-ar HOSTAR=llvm-ar NM=llvm-nm LLVM_IAS=1 STRIP=llvm-strip OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump READELF=llvm-readelf RANLIB=llvm-ranlib CC_LD=ld.lld CXX_LD=ld.lld
 %endif
 
 # Define rawhide fedora version
@@ -127,7 +127,6 @@ BuildRequires: gcc-c++
 BuildRequires: llvm
 BuildRequires: clang
 BuildRequires: lld
-BuildRequires: mold
 %endif
 Requires: %{name}-core-%{rpmver} = %{kverstr}
 Requires: %{name}-modules-%{rpmver} = %{kverstr}
