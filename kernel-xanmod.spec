@@ -24,7 +24,7 @@ Summary: The Linux Kernel with XanMod Patches
 %define _stablekver 3
 Version: %{_basekver}.%{_stablekver}
 
-%define customver 1
+%define customver 2
 %define flaver xm%{customver}
 
 Release:%{flaver}.0%{?dist}
